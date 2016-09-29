@@ -42,7 +42,7 @@ def changedounum(a,b):
     print('a=%d  b=%d' %(a,b))
 changedounum(1,2)
 
-#yield语句返回，再次执行时从上次返回的yield语句处继续执行
+#yield语句返回，再次执行时从上次返回的yield语句处继续执行 
 def odd():
     print('step 1')
     yield 1
