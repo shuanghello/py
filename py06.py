@@ -17,5 +17,43 @@ g=(x*x for x in range(1,101))
 #如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值： 
 print(g.next())
 print(next(g))
+#我们讲过，generator保存的是算法，每次调用next(g)，就计算出g的下一个元素的值，直到计算到最后一个元素，没有更多的元素时，抛出StopIteration的错误。
+#当然，上面这种不断调用next(g)实在是太变态了，正确的方法是使用for循环，因为generator也是可迭代对象：
+for x in g:
+    print(x)
+#再次强调了：generator保存的是算法，而不是对应的值
+
+#练习
+#斐波拉契数列（Fibonacci），除第一个和第二个数外，任意一个数都可由前两个数相加得到
+def fib(max):
+    n,a,b=0,0,1
+    while n<max:
+        print(b)
+        a,b=b,a+b
+        n=n+1
+    return 'Over'
+print(fib(6))
+#注意 下面两种情况的写法
+#a=b b=a+b 正常的赋值
+#a,b=b,a+b 这种写法 a+b 取得是a未赋值b的 时候的值
+#延伸 a，b 交换数值
+def changedounum(a,b):
+    a,b=b,a
+    print('a=%d  b=%d' %(a,b))
+changedounum(1,2)
+
+#yield语句返回，再次执行时从上次返回的yield语句处继续执行
+def odd():
+    print('step 1')
+    yield 1
+    print('step 2')
+    yield(3)
+    print('step 3')
+    yield(5)
+o=odd()
+print(next(o)) 
+print(next(o)) 
+print(next(o)) 
+
 
 
