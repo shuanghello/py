@@ -88,7 +88,7 @@ print(dictname['zs'])
 #dict 插入
 dictname['ls01'] = 90
 print(dictname['ls01'])
-#要避免key不存在的错误，有两种办法，
+#要避免key不存在的错误，有两种办法
 #一是通过in判断key是否存在：
 print('sss' in dictname)
 #二dict提供的get方法，如果key不存在，可以返回None，或者自己指定的value
