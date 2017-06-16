@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-print('李爽')
+print('lishuang')
 # %d 整数
 # %f 浮点数
 # %s 字符串
